@@ -1,0 +1,40 @@
+.postDisplay{
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    background-color: #333;/*#789D7A;*/
+    color: white;
+    border-radius: 12px;
+    padding: 12px 0px 10px 10px;
+}
+
+.postTitle, .postDescription, .postDepartmentCode{
+    font-weight: bold;
+    margin-bottom: 2px;
+}
+
+.postTitle{
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 0px;
+}
+
+.titleValue{
+    margin-top: 0;
+    font-size: 18px;
+}
+
+.postDescription{
+    font-size: 16px;
+}
+
+.postDepartmentCode
+{
+    font-size: 16px;
+}
+
+hr {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+

@@ -1,0 +1,50 @@
+
+//fetch all posts
+GET https://localhost:3000/api/posts HTTP/1.1
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTI1NmFjOTcwMjQ0YmIzNDJlYjg4M2IiLCJpYXQiOjE2OTcwMTI4NjIsImV4cCI6MTY5NzAyNzI2Mn0.S141pwKkQChP4KHwzfJg2lDlBXy0ak5iNvk4P2gFSgo
+###
+
+//delete specific post
+DELETE https://localhost:3000/api/posts/650d58ceda0a37ca718329ab HTTP/1.1
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTI1NmFjOTcwMjQ0YmIzNDJlYjg4M2IiLCJpYXQiOjE2OTcwMTI4NjIsImV4cCI6MTY5NzAyNzI2Mn0.S141pwKkQChP4KHwzfJg2lDlBXy0ak5iNvk4P2gFSgo
+###
+
+//fetch specific post
+GET https://localhost:3000/api/posts/65256af470244bb342eb883e HTTP/1.1
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTI1NmFjOTcwMjQ0YmIzNDJlYjg4M2IiLCJpYXQiOjE2OTcwMTI4NjIsImV4cCI6MTY5NzAyNzI2Mn0.S141pwKkQChP4KHwzfJg2lDlBXy0ak5iNvk4P2gFSgo
+###
+
+//create post
+POST https://localhost:3000/api/posts HTTP/1.1
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTI1NmFjOTcwMjQ0YmIzNDJlYjg4M2IiLCJpYXQiOjE2OTcwMTI4NjIsImV4cCI6MTY5NzAyNzI2Mn0.S141pwKkQChP4KHwzfJg2lDlBXy0ak5iNvk4P2gFSgo
+content-type: application/json
+
+{
+    "title": "my first post",
+    "description": "my first description",
+    "departmentCode": "A100"
+}
+###
+
+//login
+POST https://localhost:3000/api/auth HTTP/1.1
+content-type: application/json
+
+{
+ "username": "st10081936",
+ "password": "jakesVCLogin"
+}
+###
+
+//create user
+POST https://localhost:3000/api/users/ HTTP/1.1
+content-type: application/json
+
+{
+	"username":"st10081936" ,
+  "password": "jakesVCLogin",
+  "firstName": "jake",
+	"lastName": "young"
+}
+###
+

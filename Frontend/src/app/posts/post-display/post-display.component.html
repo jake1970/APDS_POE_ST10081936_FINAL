@@ -1,0 +1,17 @@
+<p class="screenTitle">All Posts</p>
+<p class = "subtext">Below are all the posts made by the community</p>
+<hr/>
+<div class="postDisplay" *ngFor="let post of posts">
+<p class="postTitle">Title:</p>
+<p class="titleValue">{{post.title}}</p>
+<p class="postDescription">Description:</p>
+{{post.description}}
+<p class="postDepartmentCode">Department Code:</p>
+{{post.departmentCode}}
+<br>
+<br>
+<app-post-delete *ngIf = "post.username == auth.getStoredUsername()" [inputpostid]="post._id"></app-post-delete>
+</div>
+<hr/>
+<br>
+

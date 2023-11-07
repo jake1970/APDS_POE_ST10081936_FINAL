@@ -1,0 +1,42 @@
+<p class="screenTitle">Welcome</p>
+<p class = "subtext">Enter your details to register</p>
+<form (submit)="onsignup(signup)" #signup="ngForm">
+    <input type="text"
+    ngModel name="username"
+    placeholder="Username"
+    required
+    minlength="3"
+    pattern="^(?!.*\.\.)(?!.*\.$)[A-Za-z0-9_.]{3,}$"
+    #username ="ngModel"/>
+    <div class="invalidPopup" *ngIf="username.invalid && (username.dirty || username.touched)">Invalid</div>
+    <br>
+    <input type="password"
+    ngModel name="password"
+    placeholder="Password"
+    required
+    minlength="1"
+    pattern="^([a-zA-Z0-9@*#]{8,15})$"
+    #password ="ngModel"/>
+    <div class="invalidPopup" *ngIf="password.invalid && (password.dirty || password.touched)">Invalid</div>
+    <br>
+    <input type="text"
+    ngModel name="firstName"
+    placeholder="Firstname"
+    required
+    minlength="1"
+    pattern="^[A-Za-z'-]+$"
+    #firstName ="ngModel"/>
+    <div class="invalidPopup" *ngIf="firstName.invalid && (firstName.dirty || firstName.touched)">Invalid</div>
+    <br>
+    <input type="text"
+    ngModel name="lastName"
+    placeholder="Lastname"
+    required
+    minlength="1"
+    pattern="^[A-Za-z'-]+$"
+    #lastName ="ngModel"/>
+    <div class="invalidPopup" *ngIf="lastName.invalid && (lastName.dirty || lastName.touched)">Invalid</div>
+    <br>
+    <br>
+<button type = "submit">Sign Up</button>
+</form> 

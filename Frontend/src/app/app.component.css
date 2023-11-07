@@ -1,0 +1,57 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    border-bottom: 2px solid #666;
+  }
+
+  li img {
+    width: 80%;
+  display: block;
+  margin: 0 auto; 
+  position: relative;
+  top: 50%;
+  transform: translateY(20%);
+  }
+  
+  li {
+    display: inline-block;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+  li p {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+
+  li a:hover {
+    background-color: #111;
+  }
+
+  li p:hover {
+    background-color: #111;
+  }
+
+  .titleBarName {
+    color: white;
+    padding: 0px 40px 0px 10px;
+  }
+
+
+  

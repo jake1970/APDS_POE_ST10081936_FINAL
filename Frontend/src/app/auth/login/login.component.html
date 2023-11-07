@@ -1,0 +1,24 @@
+<p class="screenTitle">Welcome Back</p>
+<p class = "subtext">Enter your details to continue</p>
+<form (submit)="onlogin(login)" #login="ngForm">
+    <input type="text"
+    ngModel name="username"
+    placeholder="Username"
+    required
+    minlength="3"
+    pattern="^(?!.*\.\.)(?!.*\.$)[A-Za-z0-9_.]{3,}$"
+    #username ="ngModel"/>
+    <div class="invalidPopup" *ngIf="username.invalid && (username.dirty || username.touched)">Invalid</div>
+    <br>
+    <input type="password"
+    ngModel name="password"
+    placeholder="Password"
+    required
+    minlength="1"
+    pattern="^([a-zA-Z0-9@*#]{8,15})$"
+    #password ="ngModel"/>
+    <div class="invalidPopup" *ngIf="password.invalid && (password.dirty || password.touched)">Invalid</div>
+    <br>
+    <br>
+<button type = "submit">Sign In</button>
+</form> 

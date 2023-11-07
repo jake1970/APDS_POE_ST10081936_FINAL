@@ -1,0 +1,24 @@
+
+
+<main>
+  <div>
+
+
+<ul>
+  <li><img src="..\assets\logo.png"/></li>
+  <li><h3 class="titleBarName">{{ title }}</h3></li>
+  <li *ngIf="auth.getToken() == null"><a routerLink="/">Sign In</a></li>
+  <li *ngIf="auth.getToken() == null"><a routerLink="signup">Sign Up</a></li>
+  <li *ngIf="auth.getToken() != null"><a routerLink="posts">Posts</a></li>
+  <li *ngIf="auth.getToken() != null"><a routerLink="create-post">Create Post</a></li>
+  <li *ngIf="auth.getToken() != null"><p class="titleBarName" (click)="auth.logout()">Logout</p></li>
+</ul>
+
+
+<br>
+
+<router-outlet></router-outlet>
+</div>
+
+
+</main>

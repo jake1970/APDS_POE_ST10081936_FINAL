@@ -1,0 +1,33 @@
+<p class="screenTitle">Create a new post</p>
+<p class = "subtext">Enter the post details below</p>
+<form (submit)="onaddpost(addpost)" #addpost="ngForm">
+    <input type="text"
+    ngModel name="title"
+    placeholder="Title"
+    required
+    minlength="3"
+    pattern="^[A-Z][a-zA-Z0-9\s]*$"
+    #title ="ngModel"/>
+    <div class="invalidPopup" *ngIf="title.invalid && (title.dirty || title.touched)">Invalid</div>
+    <br>
+    <input type="text"
+    ngModel name="description"
+    placeholder="Description"
+    required
+    minlength="3"
+    pattern="^[A-Z][a-zA-Z0-9\s]*$"
+    #description ="ngModel"/>
+    <div class="invalidPopup" *ngIf="description.invalid && (description.dirty || description.touched)">Invalid</div>
+    <br>
+    <input type="text"
+    ngModel name="departmentcode"
+    placeholder="Department Code"
+    required
+    minlength="3"
+    pattern="^[A-Z][a-zA-Z0-9\s]*$"
+    #departmentcode ="ngModel"/>
+    <div class="invalidPopup" *ngIf="departmentcode.invalid && (departmentcode.dirty || departmentcode.touched)">Invalid</div>
+    <br>
+    <br>
+<button type = "submit">Create</button>
+</form> 
